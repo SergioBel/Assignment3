@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Assignment 3 Database</h1>
+    <p class="lead">Assignment 3 Database is a Database conected through azure and C#. There are 3 tables, Instruments, Workers and Jobs. There are both type of relationships One-to-One and One-to-Many.</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <div>
+            @Html.ActionLink("List of workers", "Index", "Workers")<br />
+            @Html.ActionLink("List of instruments", "Index", "Instruments")<br />
+            @Html.ActionLink("List of jobs", "Index", "Jobs")
+        </div>
+
+    </div>

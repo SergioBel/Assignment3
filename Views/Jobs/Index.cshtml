@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Assignment3WADB.Models.Job>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.jobHours)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.jobName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.jobShifts)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.jobHours)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.jobName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.jobShifts)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.jobID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.jobID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.jobID })
+        </td>
+    </tr>
+}
+
+</table>

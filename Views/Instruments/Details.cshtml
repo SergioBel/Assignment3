@@ -1,0 +1,50 @@
+﻿@model Assignment3WADB.Models.Instrument
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Instrument</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Job.jobName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Job.jobName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Worker.firstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Worker.firstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.instrumentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.instrumentName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.instrumentPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.instrumentPrice)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.instrumentID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

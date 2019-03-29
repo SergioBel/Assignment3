@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Assignment3WADB.Models.Instrument>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Job.jobName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Worker.firstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.instrumentName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.instrumentPrice)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Job.jobName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Worker.firstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.instrumentName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.instrumentPrice)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.instrumentID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.instrumentID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.instrumentID })
+        </td>
+    </tr>
+}
+
+</table>
